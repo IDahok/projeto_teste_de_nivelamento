@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "1234567-89ab-cdef-0123-456789abcdef",
+		"name": "API Operadoras de Saúde",
+		"description": "Coleção de endpoints para a API de busca de operadoras de saúde",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Busca de Operadoras",
+			"item": [
+				{
+					"name": "Buscar por Razão Social",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/operadoras/busca?q=Saúde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operadoras",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Saúde"
+								}
+							]
+						},
+						"description": "Busca operadoras por razão social"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Registro ANS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/operadoras/busca?q=123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operadoras",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "123456"
+								}
+							]
+						},
+						"description": "Busca operadoras por registro ANS"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por CNPJ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/operadoras/busca?q=12.345.678",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operadoras",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "12.345.678"
+								}
+							]
+						},
+						"description": "Busca operadoras por CNPJ"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Cidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/operadoras/busca?q=São Paulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operadoras",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "São Paulo"
+								}
+							]
+						},
+						"description": "Busca operadoras por cidade"
+					},
+					"response": []
+				},
+				{
+					"name": "Busca sem Resultados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/operadoras/busca?q=OperadoraInexistente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"operadoras",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "OperadoraInexistente"
+								}
+							]
+						},
+						"description": "Exemplo de busca que não retorna resultados"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para busca de operadoras por diferentes critérios"
+		},
+		{
+			"name": "Teste de Banco de Dados",
+			"item": [
+				{
+					"name": "Testar Conexão",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/test-db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"test-db"
+							]
+						},
+						"description": "Testa a conexão com o banco de dados"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para testar a conexão com o banco de dados"
+		},
+		{
+			"name": "Frontend",
+			"item": [
+				{
+					"name": "Página Principal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"/"
+							]
+						},
+						"description": "Acessa a página principal do frontend"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints relacionados ao frontend da aplicação"
+		}
+	]
+} 
